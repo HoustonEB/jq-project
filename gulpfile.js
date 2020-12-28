@@ -42,11 +42,11 @@ gulp.task('default', gulp.parallel('test1', 'test2', function() {
 gulp.task('dev', gulp.series('css', 'test', function() {
     gulp.src('./')
         .pipe(webServer({
-            host: '127.0.0.1',
-            port: '8001',
-            // fallback: 'main.html',
+            host: 'localhost',
+            port: '8000',
+            fallback: 'main.html',
             livereload: true,
             directoryListing: true,
-            open: true
+            open: 'main.html'
         }));
 }));
